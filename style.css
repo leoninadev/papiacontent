@@ -1,0 +1,247 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Montaga', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5EBDF;
+    color: #384538;
+    line-height: 1.6;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adicionado padding para telas menores */
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo transparente */
+    padding: 20px 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header .navbar-brand {
+    font-family: 'Gelasio', serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #384538;
+    text-decoration: none; /* Remove underline do link */
+}
+
+header .navbar-nav .nav-link {
+    color: #384538;
+    font-size: 1.1em;
+    padding: 0 15px;
+    transition: color 0.3s ease; /* Transição de cor suave */
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #749297;
+}
+
+header .navbar-nav .nav-item .dropdown-menu {
+    background-color: #F5EBDF;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+header .navbar-nav .nav-item .dropdown-item {
+    color: #384538;
+}
+
+header .navbar-nav .nav-item .dropdown-item:hover {
+   background-color: #b3d9d9;
+   color: #384538;
+}
+/* Banners */
+.banner {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; /* Evita que conteúdo ultrapasse o banner */
+}
+
+/* Banner 1 */
+.banner-1 {
+    height: 90vh; /* Reduz a altura para um layout mais equilibrado */
+    background-image: url('img/ana-furtado-banner1.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para o posicionamento absoluto da overlay */
+}
+.banner-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* Texto sobreposto no Banner 1 */
+.banner-text-overlay {
+    text-align: center;
+    color: #F5EBDF;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+/* Título do Banner 1 */
+.banner-text {
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    font-size: 4em;
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+/* Banner 2 */
+.banner-2 {
+    background-color: #F5EBDF;
+    padding: 80px 0;
+    height: auto;
+    color: #384538;
+}
+.banner-2 .banner-text-2 {
+    font-family: 'Montaga', sans-serif;
+    font-style: italic;
+    font-size: 1.8em;
+    line-height: 1.4;
+}
+.banner-2 .banner-image-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-2 .banner-image {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Banner 3 */
+.banner-3 {
+    background-image: url('img/banner3-bg.jpg');
+    background-size: cover;
+    padding: 80px 0;
+    color: #F5EBDF;
+    background-position: top center;
+    position: relative; /* Para o posicionamento absoluto da overlay */
+}
+.banner-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay escura */
+}
+.banner-3 .bio-text {
+  font-family: 'Montaga', sans-serif;
+  font-size: 1.1em;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.8;
+    position: relative; /* Para ficar acima da overlay */
+    z-index: 1; /* Para ficar acima da overlay */
+}
+.banner-3 .bio-text p {
+  margin-bottom: 15px;
+}
+
+/* Banner 4 */
+.banner-4 {
+    padding: 80px 0;
+    background-color: #F5EBDF;
+    color: #384538;
+}
+.banner-4 h2 {
+     font-family: 'Gelasio', serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-item {
+    width: 80px;
+    height: auto;
+    margin: 0 15px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.icon-item:hover {
+    filter: grayscale(0%);
+}
+
+/* Páginas de Projetos */
+.project-page {
+    padding: 80px 0;
+    text-align: center;
+}
+.project-page h2 {
+     font-family: 'Gelasio', serif;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #384538;
+}
+
+.project-page p {
+    font-family: 'Montaga', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #384538;
+}
+
+.project-page .em-construcao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.project-page .em-construcao img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+/* Galeria de Conteúdo */
+.gallery {
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.gallery img:hover {
